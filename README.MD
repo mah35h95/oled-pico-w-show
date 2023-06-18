@@ -14,8 +14,8 @@ The connection is a bit loose so the display turns on and very rarely doesn't, D
 
 Use the Setup folder files
 
-1.  `flash_nuke.uf2` to flash the pico
-2.  `micropython-firmware-pico-w-290622.uf2` to setup micro python in pico
+1.  `setup/flash_nuke.uf2` to flash the pico
+2.  `setup/micropython-firmware-pico-w-290622.uf2` to setup micro python in pico
 3.  use Thonny to run the script into the pico
 
 ## References
