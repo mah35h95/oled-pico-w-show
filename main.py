@@ -12,8 +12,7 @@ def display_logo(oled):
     )
     fb = framebuf.FrameBuffer(buffer, 32, 32, framebuf.MONO_HLSB)
 
-    oled.fill(0)
-    oled.blit(fb, 96, 0)
+    oled.blit(fb, 96, 15)
     oled.show()
 
 
@@ -37,11 +36,13 @@ oled = SSD1306_SPI(128, 64, spi, Pin(17), Pin(20), Pin(16))
 
 oled.fill(0)
 oled.show()
-oled.text("HELLO WORLD!!", 0, 0)
-oled.text("yup HERE we are", 0, 16)
+oled.text("THANK YOU!!!", 0, 0)
+oled.text("It was Nice day!", 0, 16)
+oled.text("Almost to Quater", 0, 16 * 2)
+oled.text("life crisis >=24", 0, 16 * 3)
 oled.show()
 
-display_logo(oled)
+# display_logo(oled)
 
 # oled.fill(0)
 # oled.show()
