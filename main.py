@@ -38,9 +38,15 @@ def display_plane(oled):
 
     fb = framebuf.FrameBuffer(data, 128, 64, framebuf.MONO_HLSB)
 
-    oled.invert(0)
-    oled.blit(fb, 0, 0)
-    oled.show()
+    while True:
+        try:
+            for i in range(128):
+                # oled.invert(0)
+                oled.blit(fb, i, 0)
+                oled.show()
+                sleep_ms(10)
+        except KeyboardInterrupt:
+            break
 
 
 spi = SPI(0, 100000, mosi=Pin(19), sck=Pin(18))
