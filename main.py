@@ -69,16 +69,16 @@ oled = SSD1306_SPI(128, 64, spi, Pin(17), Pin(20), Pin(16))
 
 oled.fill(0)
 oled.show()
-# oled.text("YO!", 0, 0)
-# oled.text("something up?", 0, 16)
-# oled.text("ummmmm", 0, 16*2)
-# oled.show()
+oled.text("Happy BirthDay", 0, 0)
+oled.text("Vaishnavi!!!", 0, 16)
+oled.text("Have a Blast E>", 0, 16 * 2)
+oled.show()
 #
 # display_logo(oled)
 
 # display_pikachu(oled)
 
-display_plane(oled)
+# display_plane(oled)
 
 # oled.fill(0)
 # oled.show()
