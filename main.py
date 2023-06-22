@@ -28,6 +28,21 @@ def display_pikachu(oled):
     oled.show()
 
 
+def display_plane(oled):
+    # open image, put your image here
+    with open("plane-icon.pbm", "rb") as f:
+        f.readline()  # number
+        f.readline()  # Creator
+        f.readline()  # Dimensions
+        data = bytearray(f.read())
+
+    fb = framebuf.FrameBuffer(data, 128, 64, framebuf.MONO_HLSB)
+
+    oled.invert(0)
+    oled.blit(fb, 0, 0)
+    oled.show()
+
+
 spi = SPI(0, 100000, mosi=Pin(19), sck=Pin(18))
 
 # oled = SSD1306_SPI(WIDTH, HEIGHT, spi, dc,rst, cs) use GPIO PIN NUMBERS
@@ -46,8 +61,8 @@ oled = SSD1306_SPI(128, 64, spi, Pin(17), Pin(20), Pin(16))
 #     except KeyboardInterrupt:
 #         break
 
-# oled.fill(0)
-# oled.show()
+oled.fill(0)
+oled.show()
 # oled.text("YO!", 0, 0)
 # oled.text("something up?", 0, 16)
 # oled.text("ummmmm", 0, 16*2)
@@ -55,8 +70,9 @@ oled = SSD1306_SPI(128, 64, spi, Pin(17), Pin(20), Pin(16))
 #
 # display_logo(oled)
 
+# display_pikachu(oled)
 
-display_pikachu(oled)
+display_plane(oled)
 
 # oled.fill(0)
 # oled.show()
