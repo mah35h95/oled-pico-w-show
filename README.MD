@@ -17,6 +17,7 @@ Use the Setup folder files
 1.  `setup/flash_nuke.uf2` to flash the pico
 2.  `setup/micropython-firmware-pico-w-290622.uf2` to setup micro python in pico
 3.  use Thonny to run the script into the pico
+4.  or use VSCode to code for that use `pico-w-go` extention and follow the steps
 
 ## Circuit Diagram
 
